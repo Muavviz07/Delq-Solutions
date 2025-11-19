@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pydantic
+requests
+aiofiles
+python-multipart
+
+# command to run : uvicorn main:app --reload
