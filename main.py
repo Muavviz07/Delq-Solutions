@@ -5,6 +5,7 @@ from typing import List, Optional, Dict, Any, Union
 from app_data import DB  # <-- IMPORT THE DB FROM YOUR NEW FILE
 from fastapi.responses import FileResponse  # <--- MAKE SURE THIS IS HERE
 import os
+from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 
@@ -17,6 +18,7 @@ origins = [
     "http://localhost",
     "http://localhost:3000",
     "http://localhost:5173",
+    "https://delq-solutions.onrender.com",
 ]
 app.add_middleware(
     CORSMiddleware,
