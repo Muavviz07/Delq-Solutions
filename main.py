@@ -3,10 +3,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Optional, Dict, Any, Union
 from app_data import DB  # <-- IMPORT THE DB FROM YOUR NEW FILE
+from fastapi.responses import FileResponse  # <--- MAKE SURE THIS IS HERE
+import os
 
 app = FastAPI()
 
-from fastapi.staticfiles import StaticFiles
 
 app.mount("/imgs", StaticFiles(directory="imgs"), name="imgs")
 
@@ -693,8 +694,6 @@ def get_logistics_data():
 def get_energy_data():
     return DB["energyPageData"]
 
-
-import os
 
 # ============================================
 # SERVE REACT FRONTEND (For Docker/Production)
