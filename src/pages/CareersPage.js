@@ -92,7 +92,7 @@ export default function CareersPage() {
 
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/careers-data');
+        const response = await fetch('/api/careers-data');
         if (!response.ok) throw new Error(`Careers data failed!`);
         const data = await response.json();
         setPageData(data);

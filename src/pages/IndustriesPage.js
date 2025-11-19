@@ -18,8 +18,8 @@ export default function IndustriesPage() {
       try {
         // Fetch both sets of data in parallel
         const [industryRes, homeRes] = await Promise.all([
-          fetch('http://localhost:8000/api/industries-data'),
-          fetch('http://localhost:8000/api/home-data')
+          fetch('/api/industries-data'),
+          fetch('/api/home-data')
         ]);
 
         if (!industryRes.ok) throw new Error(`Industry data failed!`);

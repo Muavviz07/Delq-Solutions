@@ -10,7 +10,7 @@ blogPosts = [
         "link": "#"
     },
     {
-        "image": "http://localhost:8000/imgs/DELQ-Cloud-Native-Technologies.webp",
+        "image": "/imgs/DELQ-Cloud-Native-Technologies.webp",
         "title": "How Cloud-Native Technologies Are Reshaping Software Development",
         "link": "#"
     }

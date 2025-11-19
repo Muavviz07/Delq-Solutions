@@ -36,7 +36,7 @@ export default function OurStoryPage() {
         const fetchData = async () => {
           setIsLoading(true);
           try {
-            const response = await fetch('http://localhost:8000/api/our-story-data');
+            const response = await fetch('/api/our-story-data');
             if (!response.ok) throw new Error(`Data fetching failed`);
             const data = await response.json();
             setPageData(data);

@@ -20,7 +20,7 @@ export default function IndustriesSidebar() {
         // Fetch the list of industries for the sidebar
         const fetchSidebarData = async () => {
             try {
-                const response = await fetch('http://localhost:8000/api/industries-sidebar-data');
+                const response = await fetch('/api/industries-sidebar-data');
                 if (!response.ok) throw new Error('Failed to fetch sidebar data');
                 const data = await response.json();
                 setIndustryLinks(data);

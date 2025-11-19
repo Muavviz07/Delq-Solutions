@@ -18,8 +18,8 @@ export default function ServicesPage() {
     const fetchData = async () => {
       try {
         const [servicesRes, homeRes] = await Promise.all([
-          fetch('http://localhost:8000/api/services-data'),
-          fetch('http://localhost:8000/api/home-data')
+          fetch('/api/services-data'),
+          fetch('/api/home-data')
         ]);
 
         if (!servicesRes.ok) {

@@ -18,8 +18,8 @@ export default function IndustriesPage() {
     const fetchData = async () => {
       try {
         const [industryRes, homeRes] = await Promise.all([
-          fetch('http://localhost:8000/api/industries-data'), // Main page data
-          fetch('http://localhost:8000/api/home-data')     // Homepage sections data
+          fetch('/api/industries-data'), // Main page data
+          fetch('/api/home-data')     // Homepage sections data
         ]);
 
         if (!industryRes.ok) throw new Error(`Industry data failed!`);

@@ -40,7 +40,7 @@ export default function ClientPortalPage() {
         window.scrollTo(0, 0);
         const fetchData = async () => {
              try {
-                const response = await fetch('http://localhost:8000/api/client-portal-data');
+                const response = await fetch('/api/client-portal-data');
                 if (!response.ok) throw new Error(`Client Portal data failed!`);
                 const data = await response.json();
                 setPageData(data);
@@ -63,7 +63,7 @@ export default function ClientPortalPage() {
         event.preventDefault();
         setLoginStatus('sending');
         try {
-            const response = await fetch('http://localhost:8000/api/login', {
+            const response = await fetch('/api/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData)

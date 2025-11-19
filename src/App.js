@@ -87,7 +87,7 @@ export default function App() {
   useEffect(() => {
     const fetchLayoutData = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/home-data');
+        const response = await fetch('/api/home-data');
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const data = await response.json();
         setFooterData(data.footerData);

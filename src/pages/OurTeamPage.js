@@ -36,7 +36,7 @@ export default function OurTeamPage() {
         const fetchData = async () => {
           setIsLoading(true);
           try {
-            const response = await fetch('http://localhost:8000/api/our-team-data');
+            const response = await fetch('/api/our-team-data');
             if (!response.ok) throw new Error(`Data fetching failed`);
             const data = await response.json();
             setPageData(data);

@@ -18,8 +18,8 @@ export default function SolutionsPage() {
       try {
         // Fetch both sets of data in parallel
         const [solutionRes, homeRes] = await Promise.all([
-          fetch('http://localhost:8000/api/solutions-data'),
-          fetch('http://localhost:8000/api/home-data')
+          fetch('/api/solutions-data'),
+          fetch('/api/home-data')
         ]);
 
         if (!solutionRes.ok) throw new Error(`Solutions data failed!`);

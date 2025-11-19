@@ -50,7 +50,7 @@ export default function ContactPage() {
 
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/contact-page-data');
+        const response = await fetch('/api/contact-page-data');
         if (!response.ok) throw new Error(`Contact page data failed!`);
 
         const data = await response.json();
@@ -78,7 +78,7 @@ export default function ContactPage() {
     };
 
     try {
-      const response = await fetch('http://localhost:8000/api/contact', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)

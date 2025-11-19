@@ -39,7 +39,7 @@ export default function MissionVisionPage() {
         const fetchData = async () => {
           setIsLoading(true);
           try {
-            const response = await fetch('http://localhost:8000/api/mission-vision-data');
+            const response = await fetch('/api/mission-vision-data');
             if (!response.ok) throw new Error(`Data fetching failed`);
             const data = await response.json();
             setPageData(data);

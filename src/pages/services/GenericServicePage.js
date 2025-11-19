@@ -107,7 +107,7 @@ export default function GenericServicePage({ fetchUrl, breadcrumbOverride = null
           setIsLoading(true);
           setError(null);
           try {
-            const response = await fetch(`http://localhost:8000${fetchUrl}`);
+            const response = await fetch(`${fetchUrl}`);
             if (!response.ok) throw new Error(`Data fetching failed for ${fetchUrl}`);
             const data = await response.json();
             setPageData(data);

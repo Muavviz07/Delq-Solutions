@@ -14,7 +14,7 @@ export default function AboutPage() {
 
         const fetchData = async () => {
           try {
-            const response = await fetch('http://localhost:8000/api/about-data');
+            const response = await fetch('/api/about-data');
             if (!response.ok) throw new Error(`About page data failed!`);
             const data = await response.json();
             setPageData(data);
