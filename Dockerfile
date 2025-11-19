@@ -23,9 +23,9 @@ RUN npm run build
 # Stage 2: Setup the Python Backend
 # ==========================================
 # Use Python image for the backend
-FROM python:3.9
+FROM python:3.10
 
-# Set the working directory
+# Set the working directory inside the container
 WORKDIR /app
 
 # Copy your backend dependency file
