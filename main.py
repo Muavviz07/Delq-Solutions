@@ -317,10 +317,10 @@ class OurTeamPageData(BaseModel):
     comp3_playbook: List[TeamPlaybookItem]
 
 # --- API Endpoints ---
-@app.get("/")
-def read_root():
-    """Root endpoint for basic API health check."""
-    return {"message": "DELQ Solutions API is running!"}
+# @app.get("/")
+# def read_root():
+#     """Root endpoint for basic API health check."""
+#     return {"message": "DELQ Solutions API is running!"}
 
 
 @app.get("/api/home-data", response_model=HomePageData)
