@@ -701,24 +701,25 @@ def get_energy_data():
 # SERVE REACT FRONTEND (For Docker/Production)
 # ============================================
 
-# 1. Mount the 'static' folder (CSS/JS built by React)
+# 1. Mount static assets
 if os.path.exists("build/static"):
     app.mount("/static", StaticFiles(directory="build/static"), name="static")
 
-# 2. Catch-all route to serve the React App
-# This allows URLs like /about, /contact to work by serving index.html
+# 2. Catch-all route
 @app.get("/{full_path:path}")
 async def serve_react_app(full_path: str):
-    # A. Check if it's a specific file in the build root (like manifest.json or favicon.ico)
-    if os.path.exists(f"build/{full_path}"):
-        return FileResponse(f"build/{full_path}")
+    # Define the path to the requested file
+    file_path = f"build/{full_path}"
+    
+    # A. If it is a file that exists (like manifest.json, favicon.ico), serve it
+    if os.path.isfile(file_path):
+        return FileResponse(file_path)
         
-    # B. Otherwise, serve index.html (SPA Routing)
+    # B. If it's a directory or doesn't exist, serve index.html (SPA routing)
     if os.path.exists("build/index.html"):
         return FileResponse("build/index.html")
         
-    return {"error": "React build not found. Did you run 'npm run build' in the Dockerfile?"}
-
+    return {"error": "React build not found"}
 # --- Optional: Add this block to run directly with 'python main.py' ---
 if __name__ == "__main__":
     import uvicorn
