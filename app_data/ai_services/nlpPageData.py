@@ -4,8 +4,8 @@ nlpPageData = {
     "breadcrumbs": [
         {"name": "HOME", "href": "/"},
         {"name": "OUR SERVICES", "href": "/services"},
-        {"name": "AI CAPABILITIES", "href": "/services/ai-capabilities"},
-        {"name": "NLP", "href": "/services/ai-capabilities/nlp"}
+        {"name": "Artificial Intelligence", "href": "/services/artificial-intelligence"},
+        {"name": "NLP", "href": "/services/artificial-intelligence/nlp"}
     ],
     "content_blocks": [
         {

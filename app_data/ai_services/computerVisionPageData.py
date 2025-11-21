@@ -4,8 +4,8 @@ computerVisionPageData = {
     "breadcrumbs": [
         {"name": "HOME", "href": "/"},
         {"name": "OUR SERVICES", "href": "/services"},
-        {"name": "AI CAPABILITIES", "href": "/services/ai-capabilities"},
-        {"name": "COMPUTER VISION", "href": "/services/ai-capabilities/computer-vision"}
+        {"name": "Artificial Intelligence", "href": "/services/artificial-intelligence"},
+        {"name": "COMPUTER VISION", "href": "/services/artificial-intelligence/computer-vision"}
     ],
     "content_blocks": [
         {

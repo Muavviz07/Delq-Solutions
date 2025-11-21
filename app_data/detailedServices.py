@@ -1,11 +1,11 @@
 # Auto-generated from app_data.py
 detailedServices = [
     {
-        "title": "AI CAPABILITIES",
+        "title": "Artificial Intelligence",
         "number": "01",
         "description": "Ensuring Ongoing Reliability And Optimal Performance Of Your IT Systems Through Dedicated Support, Maintenance, And Help Desk Services.",
         "bgImage": "https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pYWdlfHx8fGVufDBfHx8fA%3D%3D",
-        "link": "/services/ai-capabilities"
+        "link": "/services/artificial-intelligence"
     },
     {
         "title": "SOFTWARE DEVELOPMENT",

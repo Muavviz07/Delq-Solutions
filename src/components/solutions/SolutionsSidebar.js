@@ -20,7 +20,7 @@ const FormInput = ({ name, placeholder, type = 'text' }) => (
 const solutionLinks = [
     {
         name: 'DIGITAL TRANSFORMATION',
-        href: '/solutions/digital-transformation',
+        // href: '/solutions/digital-transformation',
         sublinks: [
             { name: 'Cloud Migration', href: '/solutions/digital-transformation/cloud-migration' },
             { name: 'Automation & RPA', href: '/solutions/digital-transformation/automation-rpa' },
@@ -29,7 +29,7 @@ const solutionLinks = [
     },
     {
         name: 'CYBER SECURITY',
-        href: '/solutions/cyber-security',
+        // href: '/solutions/cyber-security',
         sublinks: [
             { name: 'Threat Monitoring', href: '/solutions/cyber-security/threat-monitoring' },
             { name: 'Incident Response', href: '/solutions/cyber-security/incident-response' },
@@ -38,7 +38,7 @@ const solutionLinks = [
     },
     {
         name: 'ENTERPRISE APPLICATIONS',
-        href: '/solutions/enterprise-applications',
+        // href: '/solutions/enterprise-applications',
         sublinks: [
             { name: 'ERP Systems', href: '/solutions/enterprise-applications/erp-systems' },
             { name: 'CRM Solutions', href: '/solutions/enterprise-applications/crm-solutions' },
@@ -47,7 +47,7 @@ const solutionLinks = [
     },
     {
         name: 'EMERGING TECHNOLOGIES',
-        href: '/solutions/emerging-technologies',
+        // href: '/solutions/emerging-technologies',
         sublinks: [
             { name: 'AI & Machine Learning', href: '/solutions/emerging-technologies/ai-ml' },
             { name: 'Blockchain', href: '/solutions/emerging-technologies/blockchain' },

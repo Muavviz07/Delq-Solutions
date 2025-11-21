@@ -1,10 +1,10 @@
 aiCapabilitiesPageData = {
     "heroBackgroundImage": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2070&auto=format&fit=crop",
-    "heading": "AI Capabilities",
+    "heading": "Artificial Intelligence",
     "breadcrumbs": [
         {"name": "HOME", "href": "/"},
         {"name": "OUR SERVICES", "href": "/services"},
-        {"name": "AI CAPABILITIES", "href": "/services/ai-capabilities"}
+        {"name": "Artificial Intelligence", "href": "/services/artificial-intelligence"}
     ],
     "content_blocks": [
         {
@@ -22,7 +22,7 @@ aiCapabilitiesPageData = {
         },
         {
             "type": "paragraph",
-            "content": "Our comprehensive suite of AI capabilities—ranging from Generative AI to Computer Vision—enables organizations to move beyond traditional automation and embrace intelligent, adaptive systems that learn and evolve."
+            "content": "Our comprehensive suite of Artificial Intelligence—ranging from Generative AI to Computer Vision—enables organizations to move beyond traditional automation and embrace intelligent, adaptive systems that learn and evolve."
         },
         {
             "type": "heading",
@@ -34,19 +34,19 @@ aiCapabilitiesPageData = {
         },
         {
             "type": "paragraph",
-            "content": "<a href='/services/ai-capabilities/generative-ai' class='text-[#d90a2c] hover:underline font-bold'>Generative AI Solutions:</a> Unlock new levels of creativity and automation with LLMs that generate text, code, and media."
+            "content": "<a href='/services/artificial-intelligence/generative-ai' class='text-[#d90a2c] hover:underline font-bold'>Generative AI Solutions:</a> Unlock new levels of creativity and automation with LLMs that generate text, code, and media."
         },
         {
             "type": "paragraph",
-            "content": "<a href='/services/ai-capabilities/nlp' class='text-[#d90a2c] hover:underline font-bold'>Natural Language Processing (NLP):</a> Bridge the gap between human communication and machine understanding for deeper insights."
+            "content": "<a href='/services/artificial-intelligence/nlp' class='text-[#d90a2c] hover:underline font-bold'>Natural Language Processing (NLP):</a> Bridge the gap between human communication and machine understanding for deeper insights."
         },
         {
             "type": "paragraph",
-            "content": "<a href='/services/ai-capabilities/computer-vision' class='text-[#d90a2c] hover:underline font-bold'>Computer Vision:</a> Empower your systems to 'see' and interpret the physical world for quality control, security, and analysis."
+            "content": "<a href='/services/artificial-intelligence/computer-vision' class='text-[#d90a2c] hover:underline font-bold'>Computer Vision:</a> Empower your systems to 'see' and interpret the physical world for quality control, security, and analysis."
         },
         {
             "type": "paragraph",
-            "content": "<a href='/services/ai-capabilities/ai-strategy' class='text-[#d90a2c] hover:underline font-bold'>AI Strategy & Consulting:</a> Navigate the complex AI landscape with expert guidance on roadmap development, ethics, and implementation."
+            "content": "<a href='/services/artificial-intelligence/ai-strategy' class='text-[#d90a2c] hover:underline font-bold'>AI Strategy & Consulting:</a> Navigate the complex AI landscape with expert guidance on roadmap development, ethics, and implementation."
         },
         {
             "type": "image_list",
@@ -92,7 +92,7 @@ aiCapabilitiesPageData = {
         },
         {
             "type": "paragraph",
-            "content": "The future belongs to the intelligent. Contact DELQ today to schedule a consultation and discover how our AI Capabilities can give you the competitive edge you need."
+            "content": "The future belongs to the intelligent. Contact DELQ today to schedule a consultation and discover how our Artificial Intelligence can give you the competitive edge you need."
         }
     ]
 }

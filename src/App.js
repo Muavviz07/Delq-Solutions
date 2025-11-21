@@ -121,12 +121,12 @@ export default function App() {
           {/* Services - Main Pages */}
           <Route path="/services" element={<ServicesPage />} />
 
-          {/* Services - AI Capabilities (Updated Structure) */}
-          <Route path="/services/ai-capabilities" element={<AiCapabilitiesPage />} />
-          <Route path="/services/ai-capabilities/generative-ai" element={<GenerativeAiPage />} />
-          <Route path="/services/ai-capabilities/nlp" element={<NlpPage />} />
-          <Route path="/services/ai-capabilities/computer-vision" element={<ComputerVisionPage />} />
-          <Route path="/services/ai-capabilities/ai-strategy" element={<AiStrategyPage />} />
+          {/* Services - Artificial Intelligence (Updated Structure) */}
+          <Route path="/services/artificial-intelligence" element={<AiCapabilitiesPage />} />
+          <Route path="/services/artificial-intelligence/generative-ai" element={<GenerativeAiPage />} />
+          <Route path="/services/artificial-intelligence/nlp" element={<NlpPage />} />
+          <Route path="/services/artificial-intelligence/computer-vision" element={<ComputerVisionPage />} />
+          <Route path="/services/artificial-intelligence/ai-strategy" element={<AiStrategyPage />} />
 
           {/* Services - Software Development (Updated Structure) */}
           <Route path="/services/software-development" element={<SoftwareDevelopmentPage />} />

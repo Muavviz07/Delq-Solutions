@@ -4,7 +4,7 @@ import GenericServicePage from '../GenericServicePage';
 export default function AiCapabilitiesPage() {
     return (
         <GenericServicePage
-            fetchUrl="/api/services/ai-capabilities-data"
+            fetchUrl="/api/services/artificial-intelligence-data"
         />
     );
 }

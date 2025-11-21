@@ -6,7 +6,7 @@ sliderData = [
         "description": "AI and machine learning to deliver smarter, more efficient solutions. Leverage the power of AI to drive innovation and improve efficiency.",
         
         "primaryBtnText": "Learn More",
-        "primaryBtnLink": "/services/ai-capabilities",
+        "primaryBtnLink": "/services/artificial-intelligence",
 
         "secondaryBtnText": "Our Solutions",
         "secondaryBtnLink": "/solutions"

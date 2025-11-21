@@ -10,18 +10,18 @@ const FormInput = ({ name, placeholder, type = 'text' }) => (
 
 const serviceLinks = [
     {
-        name: 'AI CAPABILITIES',
-        href: "/services/ai-capabilities",
+        name: 'ARTIFICIAL INTELLIGENCE',
+        // href: "/services/artificial-intelligence",
         sublinks: [
-            { name: 'Generative AI Solutions', href: '/services/ai-capabilities/generative-ai' },
-            { name: 'Natural Language Processing (NLP)', href: '/services/ai-capabilities/nlp' },
-            { name: 'Computer Vision', href: '/services/ai-capabilities/computer-vision' },
-            { name: 'AI Strategy & Consulting', href: '/services/ai-capabilities/ai-strategy' },
+            { name: 'Generative AI Solutions', href: '/services/artificial-intelligence/generative-ai' },
+            { name: 'Natural Language Processing (NLP)', href: '/services/artificial-intelligence/nlp' },
+            { name: 'Computer Vision', href: '/services/artificial-intelligence/computer-vision' },
+            { name: 'AI Strategy & Consulting', href: '/services/artificial-intelligence/ai-strategy' },
         ],
     },
     {
         name: 'SOFTWARE DEVELOPMENT',
-        href: "/services/software-development",
+        // href: "/services/software-development",
         sublinks: [
             { name: 'Web Development', href: '/services/software-development/web-development' },
             { name: 'Mobile Development', href: '/services/software-development/mobile-development' },
@@ -30,7 +30,7 @@ const serviceLinks = [
     },
     {
         name: 'IT CONSULTING',
-        href: "/services/it-consulting",
+        // href: "/services/it-consulting",
         sublinks: [
             { name: 'Digital Transformation', href: '/services/it-consulting/digital-transformation' },
             { name: 'Legacy Modernization', href: '/services/it-consulting/legacy-modernization' },
@@ -41,7 +41,7 @@ const serviceLinks = [
     },
     {
         name: 'CLOUD SERVICES',
-        href: "/services/cloud-services",
+        // href: "/services/cloud-services",
         sublinks: [
             { name: 'Cloud Migration', href: '/services/cloud-services/cloud-migration' },
             { name: 'Cloud Management', href: '/services/cloud-services/cloud-management' },
@@ -50,7 +50,7 @@ const serviceLinks = [
     },
     {
         name: 'SUPPORT & MAINTENANCE',
-        href: "/services/support-maintenance",
+        // href: "/services/support-maintenance",
         sublinks: [
             { name: 'Software Support and Maintenance', href: '/services/support-maintenance/software-support' },
             { name: 'Application Support', href: '/services/support-maintenance/application-support' },
@@ -60,7 +60,7 @@ const serviceLinks = [
     },
     {
         name: 'QUALITY ASSURANCE & TESTING',
-        href: "/services/quality-assurance",
+        // href: "/services/quality-assurance",
         sublinks: [
             { name: 'Manual Testing', href: '/services/quality-assurance/manual-testing' },
             { name: 'Automation Testing', href: '/services/quality-assurance/automated-testing' },

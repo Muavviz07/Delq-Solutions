@@ -4,8 +4,8 @@ generativeAiPageData = {
     "breadcrumbs": [
         {"name": "HOME", "href": "/"},
         {"name": "OUR SERVICES", "href": "/services"},
-        {"name": "AI CAPABILITIES", "href": "/services/ai-capabilities"},
-        {"name": "GENERATIVE AI", "href": "/services/ai-capabilities/generative-ai"}
+        {"name": "Artificial Intelligence", "href": "/services/artificial-intelligence"},
+        {"name": "GENERATIVE AI", "href": "/services/artificial-intelligence/generative-ai"}
     ],
     "content_blocks": [
         {
@@ -43,7 +43,7 @@ generativeAiPageData = {
         },
         {
             "type": "accordion_section",
-            "heading": "Our Generative AI Capabilities",
+            "heading": "Our Generative Artificial Intelligence",
             "subheading": "We deliver end-to-end generative solutions, from model fine-tuning to full-scale deployment.",
             "accordion_items": [
                 {

@@ -13,16 +13,22 @@ export default function IndustriesSection({ industriesData }) {
 
   const activeIndustry = industriesData.industries[activeIndex];
 
+  // --- SMOOTH TRANSITION LOGIC ---
   const handleIndustryChange = (index) => {
     if (index === activeIndex) {
       setIsDropdownOpen(false);
       return;
     }
+    
+    // 1. Start transition (fade out)
     setIsTransitioning(true);
+    setIsDropdownOpen(false);
+
+    // 2. Wait for fade out, then swap data
     setTimeout(() => {
       setActiveIndex(index);
-      setIsDropdownOpen(false);
-      setTimeout(() => setIsTransitioning(false), 300);
+      // 3. Fade back in
+      setTimeout(() => setIsTransitioning(false), 50);
     }, 300);
   };
 
@@ -49,7 +55,7 @@ export default function IndustriesSection({ industriesData }) {
           {/* Dropdown Button */}
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className="relative w-full font-semibold py-3 px-5 text-center flex justify-between items-center rounded-md overflow-hidden"
+            className="relative w-full font-semibold py-3 px-5 text-center flex justify-between items-center rounded-md overflow-hidden transition-all duration-300"
             style={{
               backgroundImage: `url(${activeIndustry.thumbnail})`,
               backgroundSize: "cover",
@@ -58,60 +64,70 @@ export default function IndustriesSection({ industriesData }) {
           >
             {/* Dark Overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-            <span className="relative z-10 text-white">
+            <span className="relative z-10 text-white uppercase tracking-wider text-sm">
               {activeIndustry.name}
             </span>
-            <span className="relative z-10 text-white text-lg">
-              {isDropdownOpen ? "▲" : "▼"}
+            <span className={`relative z-10 text-white text-lg transform transition-transform duration-300 ${isDropdownOpen ? "rotate-180" : "rotate-0"}`}>
+              ▼
             </span>
           </button>
 
-          {/* Dropdown List */}
-          {isDropdownOpen && (
-            <div className="absolute w-full mt-1 rounded-md overflow-hidden z-20">
-              {industriesData.industries.map((industry, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleIndustryChange(index)}
-                  className={`relative block w-full text-left px-5 py-6 font-semibold text-white transition-all duration-300 ${activeIndex === index
-                      ? "ring-2 ring-[#d90a2c]"
-                      : "hover:ring-2 hover:ring-[#d90a2c]"
+          {/* Dropdown List with Smooth Animation */}
+          <div 
+            className={`absolute w-full left-0 right-0 z-20 overflow-hidden transition-all duration-500 ease-in-out rounded-md shadow-xl ${
+                isDropdownOpen ? "max-h-[1000px] opacity-100 mt-1" : "max-h-0 opacity-0 mt-0"
+            }`}
+          >
+            <div className="flex flex-col">
+                {industriesData.industries.map((industry, index) => (
+                    <button
+                    key={index}
+                    onClick={() => handleIndustryChange(index)}
+                    // --- REVERTED STYLING: Using background images again ---
+                    className={`relative block w-full text-left px-5 py-6 font-semibold text-white transition-all duration-300 ${
+                        activeIndex === index
+                        ? "ring-4 ring-inset ring-[#d90a2c]" 
+                        : "hover:ring-4 hover:ring-inset hover:ring-[#d90a2c]"
                     }`}
-                  style={{
-                    backgroundImage: `url(${industry.thumbnail})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  }}
-                >
-                  <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-                  <span className="relative z-10">{industry.name}</span>
-                </button>
-              ))}
+                    style={{
+                        backgroundImage: `url(${industry.thumbnail})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                    }}
+                    >
+                    <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+                    <span className="relative z-10">{industry.name}</span>
+                    </button>
+                ))}
             </div>
-          )}
+          </div>
         </div>
 
-        {/* Smooth content transition */}
+        {/* Smooth content transition container */}
         <div
-          className={`relative mt-10 transition-all duration-500 ease-in-out transform ${isTransitioning
-              ? "opacity-0 translate-y-3"
+          className={`relative mt-10 transition-all duration-300 ease-in-out transform ${
+            isTransitioning
+              ? "opacity-0 translate-y-4"
               : "opacity-100 translate-y-0"
             }`}
         >
-          <img
-            src={activeIndustry.mainImage}
-            alt={activeIndustry.name}
-            className="w-full h-64 object-cover rounded-lg mb-6 transition-all duration-700 ease-in-out"
-          />
-          <p className="text-sm font-semibold tracking-[0.2em] text-black-500 mb-2">
+          <div className="overflow-hidden rounded-lg mb-6 shadow-md">
+            <img
+                src={activeIndustry.mainImage}
+                alt={activeIndustry.name}
+                className="w-full h-64 object-cover transform transition-transform duration-700 hover:scale-105"
+            />
+          </div>
+          
+          <p className="text-xs font-bold tracking-[0.2em] text-[#d90a2c] mb-2 uppercase">
             {activeIndustry.subtitle}
           </p>
           <h3
-            className="text-3xl font-bold text-[#1c1c1c] mb-3"
+            className="text-3xl font-bold text-[#1c1c1c] mb-3 leading-tight"
             style={{ fontFamily: "'Urbanist', sans-serif" }}
             dangerouslySetInnerHTML={createMarkup(activeIndustry.heading)}
           />
-          <h4 className="text-xl font-semibold text-black-700 mb-3">
+          <h4 className="text-lg font-medium text-gray-700 mb-4">
             {activeIndustry.subheading}
           </h4>
           <p className="text-base text-gray-600 leading-relaxed mb-6">
@@ -119,7 +135,7 @@ export default function IndustriesSection({ industriesData }) {
           </p>
           <Link
             to={activeIndustry.href}
-            className="bg-[#d90a2c] text-white px-7 py-2.5 rounded-full text-sm font-semibold hover:bg-black transition-colors duration-300 inline-block"
+            className="bg-[#d90a2c] text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-black transition-colors duration-300 inline-block shadow-lg"
           >
             Know More
           </Link>
@@ -127,7 +143,7 @@ export default function IndustriesSection({ industriesData }) {
         </div>
       </div>
 
-      {/* ---- Desktop Layout ---- */}
+      {/* ---- Desktop Layout (Unchanged) ---- */}
       <div className="container mx-auto px-8 md:px-16 lg:px-20 mt-20 hidden lg:block">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Column */}
@@ -175,7 +191,7 @@ export default function IndustriesSection({ industriesData }) {
         </div>
       </div>
 
-      {/* ---- Desktop Timeline Section ---- */}
+      {/* ---- Desktop Timeline Section (Unchanged) ---- */}
       <div className="container mx-auto px-8 md:px-16 lg:px-20 mt-20 hidden lg:block">
         <div className="relative">
           <div

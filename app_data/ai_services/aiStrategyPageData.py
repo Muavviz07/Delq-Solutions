@@ -4,8 +4,8 @@ aiStrategyPageData = {
     "breadcrumbs": [
         {"name": "HOME", "href": "/"},
         {"name": "OUR SERVICES", "href": "/services"},
-        {"name": "AI CAPABILITIES", "href": "/services/ai-capabilities"},
-        {"name": "AI STRATEGY", "href": "/services/ai-capabilities/ai-strategy"}
+        {"name": "Artificial Intelligence", "href": "/services/artificial-intelligence"},
+        {"name": "AI STRATEGY", "href": "/services/artificial-intelligence/ai-strategy"}
     ],
     "content_blocks": [
         {

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Header = ({ onSidebarOpen }) => {
-  const [activeService, setActiveService] = useState("AI Capabilities");
+  const [activeService, setActiveService] = useState("Artificial Intelligence");
   const [activeSolution, setActiveSolution] = useState("Digital Transformation");
   const [activeIndustry, setActiveIndustry] = useState("Education");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,13 +10,13 @@ const Header = ({ onSidebarOpen }) => {
   const [openMegaMenu, setOpenMegaMenu] = useState(null);
 
   const servicesData = {
-    "AI Capabilities": {
-      href: "/services/ai-capabilities",
+    "Artificial Intelligence": {
+      href: "/services/artificial-intelligence",
       subcategories: [
-        { name: "Generative AI Solutions", href: "/services/ai-capabilities/generative-ai" },
-        { name: "Natural Language Processing (NLP)", href: "/services/ai-capabilities/nlp" },
-        { name: "Computer Vision", href: "/services/ai-capabilities/computer-vision" },
-        { name: "AI Strategy & Consulting", href: "/services/ai-capabilities/ai-strategy" },
+        { name: "Generative AI Solutions", href: "/services/artificial-intelligence/generative-ai" },
+        { name: "Natural Language Processing (NLP)", href: "/services/artificial-intelligence/nlp" },
+        { name: "Computer Vision", href: "/services/artificial-intelligence/computer-vision" },
+        { name: "AI Strategy & Consulting", href: "/services/artificial-intelligence/ai-strategy" },
       ],
       image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1000",
       text: "Unlock the potential of artificial intelligence to automate, innovate, and transform your business operations.",
@@ -241,9 +241,11 @@ const Header = ({ onSidebarOpen }) => {
               )}
 
               {link.megaMenu && (
-                <div className={`fixed left-0 right-0 top-16 lg:top-[4.5rem] w-screen bg-white border-t-2 border-[#d90a2c] shadow-lg transition-all duration-500 ease-in-out transform z-40 ${link.name === "Industries" ? "h-[28rem]" : "h-[24rem]"} ${openMegaMenu === link.name ? "opacity-100 visible translate-y-0" : "opacity-0 invisible translate-y-1"}`}>
+                <div 
+                  className={`fixed left-0 right-0 top-16 lg:top-[4.5rem] w-screen bg-white border-t-2 border-[#d90a2c] shadow-lg transition-all duration-500 ease-in-out transform z-40 h-auto max-h-[80vh] overflow-y-auto ${openMegaMenu === link.name ? "opacity-100 visible translate-y-0" : "opacity-0 invisible translate-y-1"}`}
+                >
                   <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className={`grid grid-cols-12 gap-8 p-8 ${link.name === "Industries" ? "pb-16" : "pb-12"}`}>
+                    <div className="grid grid-cols-12 gap-8 p-8">
                       <div className="col-span-4 border-r border-gray-200">
                         {link.name === "Services" ? Object.entries(servicesData).map(([service, data]) => (
                           <Link key={service} to={data.href || "#"} onMouseEnter={() => setActiveService(service)} onClick={() => setOpenMegaMenu(null)} className={`block cursor-pointer px-4 py-3 text-base font-normal mb-2 transition-all duration-300 ${activeService === service ? "bg-[#d90a2c] text-white shadow-sm" : "bg-gray-100 hover:bg-[#d90a2c] hover:text-white"}`}>
