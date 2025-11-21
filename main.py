@@ -379,11 +379,26 @@ def get_client_portal_page_data():
     return DB["clientPortalPageData"]
 
 
+# --- UPDATED: Contact Form Handler ---
 @app.post("/api/contact")
 async def handle_contact_form(payload: ContactFormPayload):
-    """Receives contact form submissions."""
-    print("--- New Contact Form Submission ---")
-    # ... (contact form logic) ...
+    """
+    Receives contact form submissions and targets them to website@delqsolutions.com
+    """
+    target_email = "website@delqsolutions.com"
+    
+    print(f"--------------------------------------------------")
+    print(f"📧 NEW FORM SUBMISSION RECEIVED")
+    print(f"➡️  SENDING TO: {target_email}")
+    print(f"--------------------------------------------------")
+    print(f"FROM:    {payload.name} ({payload.email})")
+    print(f"MOBILE:  {payload.mobile}")
+    print(f"TOPIC:   {payload.helpTopic if payload.helpTopic else payload.help_topics}")
+    print(f"MESSAGE: {payload.message}")
+    print(f"--------------------------------------------------")
+    
+    # TODO: Integrate smtplib or fastapi-mail here to send the actual email.
+    
     return {"message": "Form submitted successfully!"}
 
 @app.post("/api/subscribe")
@@ -396,12 +411,9 @@ async def handle_subscription(payload: NewsletterSubscription):
 async def handle_login(payload: LoginPayload):
     """Handles client login attempts."""
     print("--- Client Login Attempt ---")
-    # ... (login logic) ...
     if payload.email == "test@example.com" and payload.password == "password":
-         print("--- Login Successful (Placeholder) ---")
          return {"message": "Login successful!", "status": "success"} 
     else:
-        print("--- Login Failed (Placeholder) ---")
         return {"message": "Invalid credentials.", "status": "error"} 
 
 
@@ -525,9 +537,9 @@ def get_our_team_page_data():
     print("--- SERVER LOG: /api/our-team-data endpoint was hit. ---")
     return DB["ourTeamPageData"]
 
-@app.get("/api/services/ai-capabilities-data", response_model=GenericServicePageData)
+@app.get("/api/services/artificial-intelligence-data", response_model=GenericServicePageData)
 def get_ai_capabilities_page_data():
-    print("--- SERVER LOG: /api/services/ai-capabilities-data endpoint was hit. ---")
+    print("--- SERVER LOG: /api/services/artificial-intelligence-data endpoint was hit. ---")
     return DB["aiCapabilitiesPageData"]
 
 @app.get("/api/services/ai/generative-ai-data", response_model=GenericServicePageData)

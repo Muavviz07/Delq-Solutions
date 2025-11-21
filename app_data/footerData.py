@@ -3,8 +3,8 @@ footerData = {
     "aboutText": "We provide innovative tech services and smart solutions for modern businesses, empowering growth with scalable cloud platforms, and seamless system integration.",
     "servicesLinks": [
         {
-            "name": "AI Capabilities",
-            "href": "/services/ai-capabilities"
+            "name": "Artificial Intelligence",
+            "href": "/services/artificial-intelligence"
         },
         {
             "name": "Software Development",
@@ -74,19 +74,19 @@ footerData = {
     "socialMedia": [
         {
             "platform": "facebook",
-            "url": "#"
+            "url": "https://www.facebook.com/DelQSolutions"
         },
         {
             "platform": "linkedin",
-            "url": "#"
+            "url": "https://www.linkedin.com/company/delq-solutions/"
         },
         {
-            "platform": "dribbble",
-            "url": "#"
+            "platform": "dribbble", # Using Dribbble icon for Blogspot as requested
+            "url": "https://delqsolutions.blogspot.com/"
         },
         {
-            "platform": "twitter",
-            "url": "#"
+            "platform": "twitter", # Using Twitter icon for X
+            "url": "https://x.com/DelQSolutions"
         }
     ]
 }
