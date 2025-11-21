@@ -66,7 +66,7 @@ footerData = {
         "href": "/careers"
     },
     "contact": {
-        "phone": "+91 44 4776 6611",
+        "phone": "+44 7586 955136",
         "info_email": "info@delqsolutions.com",
         "sales_email": "sales@delqsolutions.com"
     },

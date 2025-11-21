@@ -98,19 +98,6 @@ export default function ContactPage() {
   if (error) return <div className="h-screen w-full flex items-center justify-center text-red-500">{error}</div>;
   if (!pageData) return null;
 
-  const icons = {
-    mail: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-      </svg>
-    ),
-    phone: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-      </svg>
-    )
-  };
-
   return (
     <main className="bg-white">
 
@@ -152,46 +139,43 @@ export default function ContactPage() {
               {pageData.section_description}
             </p>
 
-            {/* Contact Info */}
             {/* Contact Info (updated layout) */}
-<div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 mb-10">
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 mb-10">
 
-  {/* Mail Info */}
-  <div className="flex items-center">
-    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-transparent text-[#d90a2c] flex items-center justify-center">
-      {/* Red Mail Icon */}
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2v.01L12 13 4 6.01V6h16z" />
-      </svg>
-    </div>
-    <div className="ml-4">
-      <h4 className="font-semibold text-black">Mail Us @</h4>
-      <a href="mailto:info@delqsolutions.com" className="text-gray-600 hover:text-[#d90a2c]">
-        info@delqsolutions.com
-      </a>
-    </div>
-  </div>
+              {/* Mail Info */}
+              <div className="flex items-center">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-transparent text-[#d90a2c] flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2v.01L12 13 4 6.01V6h16z" />
+                  </svg>
+                </div>
+                <div className="ml-4">
+                  <h4 className="font-semibold text-black">Mail Us @</h4>
+                  <a href="mailto:info@delqsolutions.com" className="text-gray-600 hover:text-[#d90a2c]">
+                    info@delqsolutions.com
+                  </a>
+                </div>
+              </div>
 
-  {/* Divider for large screens */}
-  <div className="hidden lg:block w-px h-10 bg-gray-300"></div>
+              {/* Divider for large screens */}
+              <div className="hidden lg:block w-px h-10 bg-gray-300"></div>
 
-  {/* Call Info */}
-  <div className="flex items-center">
-    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-transparent text-[#d90a2c] flex items-center justify-center">
-      {/* Red Phone Icon */}
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l1.94-1.94a1 1 0 0 1 1.06-.24 11.36 11.36 0 0 0 3.58.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 6a1 1 0 0 1 1-1h3.33a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.58 1 1 0 0 1-.24 1.06z" />
-      </svg>
-    </div>
-    <div className="ml-4">
-      <h4 className="font-semibold text-black">Call Us</h4>
-      <a href="tel:+914447766611" className="text-gray-600 hover:text-[#d90a2c]">
-        +91 44 4776 6611
-      </a>
-    </div>
-  </div>
-</div>
-
+              {/* Call Info */}
+              <div className="flex items-center">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-transparent text-[#d90a2c] flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l1.94-1.94a1 1 0 0 1 1.06-.24 11.36 11.36 0 0 0 3.58.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 6a1 1 0 0 1-1 1h3.33a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.58 1 1 0 0 1-.24 1.06z" />
+                  </svg>
+                </div>
+                <div className="ml-4">
+                  <h4 className="font-semibold text-black">Call Us</h4>
+                  {/* --- UPDATED NUMBER AND LINK --- */}
+                  <a href="tel:+447586955136" className="text-gray-600 hover:text-[#d90a2c]">
+                    +44 7586 955136
+                  </a>
+                </div>
+              </div>
+            </div>
 
             {/* Image */}
             <img

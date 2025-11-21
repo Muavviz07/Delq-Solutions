@@ -305,7 +305,7 @@ const Header = ({ onSidebarOpen }) => {
 
         <div className="hidden lg:flex items-center space-x-6 text-sm flex-shrink-0 justify-end">
           <div className="flex items-center text-black">
-            <a href="tel:+914447766611" className="font-bold hover:text-[#d90a2c] transition-colors duration-300">+91 44 4776 6611</a>
+            <a href="tel:+447586955136" className="font-bold hover:text-[#d90a2c] transition-colors duration-300">+44 7586 955136</a>
           </div>
           <Link to="/client-portal" className="text-black underline font-semibold hover:text-[#d90a2c] transition-colors duration-300">Client Portal</Link>
         </div>

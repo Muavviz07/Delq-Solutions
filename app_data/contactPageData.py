@@ -16,8 +16,8 @@ contactPageData = {
         {
             "label": "Call Us",
             "icon": "phone",
-            "value": "+91 44 4776 6611",
-            "href": "tel:+914447766611"
+            "value": "+44 7586 955136", # --- UPDATED NUMBER ---
+            "href": "tel:+447586955136"
         }
     ],
     "section_image": "https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pYWdlfHx8fGVufDBfHx8fA%3D%3D",
